@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException, status, Request
 from pydantic import BaseModel
 import requests
+import uvicorn
 
 app = FastAPI()
 
@@ -11,5 +12,4 @@ def hello_world():
 
 # Running the FastAPI app with uvicorn
 if __name__ == "__main__":
-    import uvicorn
     uvicorn.run(app, host="localhost", port=8000)
